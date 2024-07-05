@@ -4,6 +4,11 @@ import { AppService } from './app.service';
 import { UsersModule } from './modules/users/users.module';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { StateModule } from './modules/state/state.module';
+import { CityModule } from './modules/city/city.module';
+import { AddressModule } from './modules/address/address.module';
+
+
 
 
 @Module({
@@ -25,7 +30,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       
 
     }), 
-    UsersModule
+    UsersModule, StateModule, CityModule, AddressModule, 
   ],
   controllers: [AppController],
   providers: [AppService],
